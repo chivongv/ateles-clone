@@ -36,6 +36,13 @@ const LocationWrapper = styled('div')({
   },
 });
 
+const HoverLink = styled('a')({
+  transition: 'color 200ms ease',
+  ':hover': {
+    color: 'rgba(255,255,255,0.5)',
+  },
+});
+
 const Location = styled('div')({
   padding: '20px 10px',
   marginBottom: '1em',
@@ -44,6 +51,7 @@ const Location = styled('div')({
 
 const LocationCity = styled('p')({
   marginBottom: '1em',
+  fontWeight: 600,
 });
 
 const LocationAdress = styled('div')({
@@ -108,7 +116,8 @@ const Footer = () => {
           <img src="/weareateles-footer.png" />
         </Wrapper>
         <p style={{ padding: '10px 20px', fontWeight: 'bold' }}>
-          New business: <a href="mailto:hello@ateles.se">hello@ateles.se</a>
+          New business:{' '}
+          <HoverLink href="mailto:hello@ateles.se">hello@ateles.se</HoverLink>
         </p>
         <LocationWrapper>
           <Location>
@@ -121,9 +130,13 @@ const Footer = () => {
               112 27 Stockholm
             </LocationAdress>
             <LocationContact>
-              Tel: <a href="tel:+46 8 750 70 20">+46 8 750 70 20</a>
+              Tel:{' '}
+              <HoverLink href="tel:+46 8 750 70 20">+46 8 750 70 20</HoverLink>
               <br />
-              Email: <a href="mailto:hello@ateles.se">hello@ateles.se</a>
+              Email:{' '}
+              <HoverLink href="mailto:hello@ateles.se">
+                hello@ateles.se
+              </HoverLink>
             </LocationContact>
           </Location>
           <Location>
@@ -135,9 +148,13 @@ const Footer = () => {
               583 30 Linköping
             </LocationAdress>
             <LocationContact>
-              Tel: <a href="tel:+46 13 21 10 20">+46 13 21 10 20</a>
+              Tel:{' '}
+              <HoverLink href="tel:+46 13 21 10 20">+46 13 21 10 20</HoverLink>
               <br />
-              Email: <a href="mailto:hello@ateles.se">hello@ateles.se</a>
+              Email:{' '}
+              <HoverLink href="mailto:hello@ateles.se">
+                hello@ateles.se
+              </HoverLink>
             </LocationContact>
           </Location>
           <Location>
@@ -149,9 +166,12 @@ const Footer = () => {
               0274 Oslo
             </LocationAdress>
             <LocationContact>
-              Tel: <a href="tel:+47 21544643">+47 21544643</a>
+              Tel: <HoverLink href="tel:+47 21544643">+47 21544643</HoverLink>
               <br />
-              Email: <a href="mailto:hello@ateles.no">hello@ateles.no</a>
+              Email:{' '}
+              <HoverLink href="mailto:hello@ateles.no">
+                hello@ateles.no
+              </HoverLink>
             </LocationContact>
           </Location>
         </LocationWrapper>

@@ -1,26 +1,29 @@
+import * as React from 'react';
 import styled from '@emotion/styled';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import SocialMediaNav from './SocialMediaNav';
 
 const Container = styled('header')({
-  position: 'fixed',
   zIndex: 1001,
   background: '#fff',
-  width: '100vw',
+  width: '100%',
+  position: 'relative',
 });
 
 const Inner = styled('div')({
   maxWidth: 1200,
   display: 'flex',
-  padding: '10px 15px',
+  padding: '35px 15px 15px',
   justifyContent: 'space-between',
+  alignContent: 'center',
   margin: '0 auto',
 });
 
 const NavWrapper = styled('div')({
   display: 'flex',
   gap: 20,
+  backgroundColor: 'var(--colors-white)',
 });
 
 const Logo = styled('a')({
@@ -29,22 +32,35 @@ const Logo = styled('a')({
   '> img': {
     width: 80,
   },
+  '@media screen and (min-width: 992px)': {
+    '> img': {
+      width: 120,
+    },
+  },
 });
 
 const Nav = styled('nav')({
   position: 'relative',
+  display: 'flex',
+  flexDirection: 'column',
   '> a': {
-    marginRight: 10,
+    marginRight: 20,
     ':last-child': {
       marginRight: 0,
     },
+  },
+  '@media screen and (min-width: 992px)': {
+    marginRight: 40,
+    flexDirection: 'row',
   },
 });
 
 const NavLink = styled('a')<{ isActive?: boolean }>(({ isActive }) => ({
   color: isActive ? 'var(--colors-orange)' : 'var(--colors-text)',
   cursor: 'pointer',
-  fontWeight: 500,
+  fontSize: '0.875rem',
+  fontWeight: 600,
+  textTransform: 'uppercase',
   ':hover': {
     color: 'var(--colors-orange)',
   },

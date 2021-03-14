@@ -4,9 +4,14 @@ const Container = styled('section')({
   padding: '50px 30px 20px',
   margin: '0 auto',
   maxWidth: 1200,
+  zIndex: 3,
   '@media screen and (min-width: 1000px)': {
-    padding: '100px 30px',
-    margin: '50px auto',
+    padding: '50px 30px',
+    margin: '0 auto',
+  },
+  '@media screen and (min-width: 1800px)': {
+    padding: '150px 30px',
+    margin: '100px auto 0',
   },
 });
 
@@ -15,6 +20,7 @@ const Title = styled('h2')({
   padding: 20,
   margin: '0 auto 1rem',
   '@media screen and (min-width: 1000px)': {
+    paddingTop: 50,
     margin: '3rem auto 4rem',
   },
 });
@@ -58,7 +64,7 @@ const CheckList = styled('ul')({
       textDecoration: 'underline',
     },
     ':hover': {
-      color: 'var(--colors-orange-light)',
+      color: 'var(--colors-light-orange)',
     },
   },
   'li::before': {

@@ -2,8 +2,10 @@
 
 :root {
   --colors-orange: rgb(252, 102, 33);
-  --colors-orange-light: hsl(18.9, 97.3%, 70%);
-  --colors-white: #fff;
+  --colors-light-orange: hsl(18.9, 97.3%, 70%);
+  --colors-white: rgba(255, 255, 255, 1);
+  --colors-light-gray: rgba(255, 255, 255, 0.5);
+  --colors-normal-gray: rgba(255, 255, 255, 0.3);
   --colors-text: rgb(0, 2, 50);
 }
 
@@ -28,46 +30,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-#navbar__menu-toggle {
-  display: none;
-}
-
-#navbar__menu-toggle:checked ~ .navbar__navlinks {
-  width: 0;
-  margin: 0;
-}
-
-.navbar__menu {
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  top: 50%;
-  right: 0;
-  transform: translate(-50%, -50%);
-}
-
-.navbar__menu span {
-  width: 24px;
-  height: 2px;
-  background: #000;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transition: transform 0.5s ease;
-}
-
-.navbar__menu span:first-child {
-  transform: translateY(-14px) rotate(0);
-}
-
-.navbar__menu span:nth-child(2) {
-  transform: translateY(-7px) rotate(0);
-}
-
-#navbar__menu-toggle span:last-child {
-  transform: translateY(-2px) rotate(0);
 }

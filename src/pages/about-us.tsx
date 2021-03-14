@@ -72,9 +72,10 @@ const Consent = styled('div')({
 const Button = styled('button')({
   border: 'none',
   background: 'rgb(0, 0, 51)',
-  color: '#fff',
-  padding: '20px 30px',
+  color: 'var(--colors-white)',
+  padding: '10px 25px',
   borderRadius: 3,
+  cursor: 'pointer',
 });
 
 const AboutUs = () => {

@@ -7,6 +7,7 @@ const Container = styled('section')({
   display: 'flex',
   flexDirection: 'column',
   position: 'relative',
+  zIndex: 0,
 });
 
 const IframeWrapper = styled('div')({
@@ -17,6 +18,7 @@ const IframeWrapper = styled('div')({
   height: 0,
   zIndex: -1,
   overflow: 'hidden',
+  background: 'black',
   ['iframe, object, embed']: {
     position: 'absolute',
     left: 0,
@@ -27,16 +29,31 @@ const IframeWrapper = styled('div')({
       display: 'none !important',
     },
   },
+  '::after': {
+    content: '""',
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    top: '-5%',
+    left: 0,
+    background: 'hsl(0, 0%, 20%, 0.25)',
+    zIndex: 0,
+  },
 });
 
 const Center = styled('div')({
   position: 'absolute',
-  top: '50%',
+  top: '30%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
+  '@media screen and (min-width: 992px)': {
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+  },
 });
 
 const Title = styled('h1')({
@@ -44,10 +61,11 @@ const Title = styled('h1')({
   textAlign: 'center',
   fontWeight: 'bold',
   padding: 10,
-  marginBottom: 50,
+  marginBottom: 10,
   maxWidth: 1200,
   '@media screen and (min-width: 1000px)': {
     fontSize: '3rem',
+    marginBottom: 50,
   },
 });
 
@@ -73,9 +91,16 @@ const ButtonLink = styled('a')({
 
 const ArrowWrapper = styled('div')({
   position: 'absolute',
-  bottom: 100,
+  bottom: 170,
   left: '50%',
-  transform: 'translateX(-50%)',
+  transition: 'transform 200ms ease-in-out',
+  transform: 'translate(-50%, 0)',
+  ':hover': {
+    transform: 'translate(-50%, 5px)',
+  },
+  '@media screen and (min-width: 1000px)': {
+    bottom: 140,
+  },
 });
 
 const Hero = () => {
@@ -85,7 +110,7 @@ const Hero = () => {
         <iframe
           width="100%"
           height="100%"
-          src="https://www.youtube.com/embed/pKAO6F29bhg?rel=0&autoplay=1&mute=1&controls=0&?playlist=pKAO6F29bhg&loop=1"
+          src="https://www.youtube.com/embed/pKAO6F29bhg?rel=0&autoplay=1&loop=1&mute=1&controls=0&playlist=pKAO6F29bhg"
           frameBorder="0"
           allowFullScreen
         />

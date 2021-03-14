@@ -11,7 +11,7 @@ import {
 } from '../data/our-offer';
 
 const Banner = styled('div')({
-  height: '100vh',
+  minHeight: '100vh',
   background:
     'url("/assets/andrew-ridley-jR4Zf-riEjI-unsplash.jpg") no-repeat center',
   backgroundSize: 'cover',
@@ -19,10 +19,13 @@ const Banner = styled('div')({
   flexDirection: 'column',
   justifyContent: 'center',
   alignContent: 'center',
+  backgroundAttachment: 'fixed',
+  marginBottom: 20,
+  position: 'relative',
   '::after': {
     content: '""',
     width: '100%',
-    height: '100vh',
+    height: '100%',
     position: 'absolute',
     top: 0,
     left: 0,
@@ -33,6 +36,7 @@ const Banner = styled('div')({
 });
 
 const BannerInner = styled('div')({
+  height: '100%',
   maxWidth: 1200,
   margin: '0 auto',
   textAlign: 'center',
@@ -52,10 +56,34 @@ const BannerText = styled('p')({
   letterSpacing: 1,
 });
 
+const BannerServiceList = styled('div')({
+  display: 'flex',
+  flexWrap: 'wrap',
+  paddingBottom: 70,
+  justifyContent: 'center',
+  gap: 15,
+});
+
+const BannerService = styled('div')({
+  width: '100%',
+  '@media screen and (min-width: 450px)': {
+    width: '45%',
+  },
+  '@media screen and (min-width: 992px)': {
+    width: '25%',
+  },
+});
+
 const BannerLink = styled('a')({
   fontSize: '2rem',
-  borderBottom: '1px solid #fff',
+  fontWeight: 600,
+  borderBottom: '1px solid var(--colors-light-gray)',
   cursor: 'pointer',
+  transition: 'color 200ms ease-in-out, border 200ms ease-in-out',
+  ':hover': {
+    color: 'var(--colors-light-gray)',
+    borderBottom: '1px solid var(--colors-normal-gray)',
+  },
 });
 
 const BannerServiceText = styled('p')({
@@ -65,10 +93,17 @@ const BannerServiceText = styled('p')({
 
 const ArrowWrapper = styled('div')({
   position: 'absolute',
-  bottom: 100,
+  bottom: 10,
   left: '50%',
-  transform: 'translateX(-50%)',
+  transform: 'translate(-50%, 0)',
   zIndex: 2,
+  transition: 'transform 200ms ease-in-out',
+  ':hover': {
+    transform: 'translate(-50%, 5px)',
+  },
+  '@media screen and (min-width: 992px)': {
+    bottom: 100,
+  },
 });
 
 const SectionInner = styled('div')({
@@ -111,6 +146,10 @@ const Service = styled('div')({
   },
 });
 
+const ImageContainerTitle = styled('span')({
+  fontWeight: 600,
+});
+
 const ImageContainerLink = styled('a')({
   width: '100%',
   display: 'flex',
@@ -135,20 +174,22 @@ const ImageContainer = styled('div')<{ imgUrl: string }>(({ imgUrl }) => ({
     content: '""',
     width: '100%',
     height: '100%',
-    background: '#333',
-    opacity: 0.3,
+    background: 'hsl(0, 0%, 20%, 0.35)',
     position: 'absolute',
     top: 0,
     left: 0,
     zIndex: 0,
   },
   '> *': {
-    zIndex: 5,
+    zIndex: 2,
   },
 }));
 
 const ReadMore = styled('a')({
   color: 'var(--colors-orange)',
+  ':hover': {
+    color: 'var(--colors-light-orange)',
+  },
 });
 
 const OurOffer = () => {
@@ -159,18 +200,18 @@ const OurOffer = () => {
         <BannerInner>
           <BannerTitle>{bannerData.title}</BannerTitle>
           <BannerText>{bannerData.text}</BannerText>
-          <div style={{ display: 'flex' }}>
+          <BannerServiceList>
             {bannerData.services.map((el) => {
               return (
-                <div>
+                <BannerService key={el.title}>
                   <Link href={el.url}>
                     <BannerLink>{el.title}</BannerLink>
                   </Link>
                   <BannerServiceText>{el.text}</BannerServiceText>
-                </div>
+                </BannerService>
               );
             })}
-          </div>
+          </BannerServiceList>
         </BannerInner>
         <ArrowWrapper>
           <Link href="#ecom-tech">
@@ -189,7 +230,7 @@ const OurOffer = () => {
                 <Service key={el.title}>
                   <ImageContainerLink href={el.url}>
                     <ImageContainer imgUrl={el.imgUrl}>
-                      <span>{el.title}</span>
+                      <ImageContainerTitle>{el.title}</ImageContainerTitle>
                     </ImageContainer>
                   </ImageContainerLink>
                   <p>{el.content}</p>
@@ -207,7 +248,7 @@ const OurOffer = () => {
                 <Service key={el.title}>
                   <ImageContainerLink href={el.url}>
                     <ImageContainer imgUrl={el.imgUrl}>
-                      <span>{el.title}</span>
+                      <ImageContainerTitle>{el.title}</ImageContainerTitle>
                     </ImageContainer>
                   </ImageContainerLink>
                   <p>{el.content}</p>
@@ -225,7 +266,7 @@ const OurOffer = () => {
                 <Service key={el.title}>
                   <ImageContainerLink href={el.url}>
                     <ImageContainer imgUrl={el.imgUrl}>
-                      <span>{el.title}</span>
+                      <ImageContainerTitle>{el.title}</ImageContainerTitle>
                     </ImageContainer>
                   </ImageContainerLink>
                   <p>{el.content}</p>
