@@ -2,8 +2,9 @@
 
 :root {
   --colors-orange: rgb(252, 102, 33);
+  --colors-orange-light: hsl(18.9, 97.3%, 70%);
   --colors-white: #fff;
-  --colors-text: #000;
+  --colors-text: rgb(0, 2, 50);
 }
 
 * {
