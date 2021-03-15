@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import SocialMediaNav from './SocialMediaNav';
+import NavItemLink from './NavItemLink';
 
 const Container = styled('header')({
   zIndex: 1001,
@@ -32,12 +33,12 @@ const NavWrapper = styled('div')<{ isOpen: boolean }>(({ isOpen }) => ({
     flexFlow: 'column wrap',
     position: 'fixed',
     top: 0,
-    left: 0,
+    left: '-100%',
     width: '100%',
     height: '100%',
     opacity: isOpen ? '1' : '0',
-    transform: isOpen ? 'translateX(0%)' : 'translateX(-100%)',
-    transition: 'transform 500ms ease-in-out, opacity 300ms ease-in-out',
+    transform: isOpen ? 'translateX(100%)' : 'translateX(0%)',
+    transition: 'transform 500ms ease-in-out, opacity 200ms ease-in-out',
     zIndex: 1,
   },
 }));
@@ -123,6 +124,20 @@ const Nav = styled('nav')({
   position: 'relative',
   display: 'flex',
   flexDirection: 'column',
+  '> ul': {
+    display: 'flex',
+    listStyle: 'none',
+    flexFlow: 'column wrap',
+    '@media screen and (min-width: 640px)': {
+      flexFlow: 'row wrap',
+    },
+    li: {
+      marginRight: 20,
+      ':last-child': {
+        marginRight: 0,
+      },
+    },
+  },
   '> a': {
     marginRight: 20,
     ':last-child': {
@@ -166,17 +181,55 @@ const Navbar = () => {
         </Link>
         <NavWrapper isOpen={isOpen}>
           <Nav>
-            <Link href="/our-offer" passHref>
-              <NavLink isActive={router.asPath === '/our-offer'}>
-                What we do
-              </NavLink>
-            </Link>
-            <Link href="/about-us" passHref>
-              <NavLink isActive={router.asPath === '/about-us'}>Info</NavLink>
-            </Link>
-            <Link href="https://www.atelesconsulting.com/eng" passHref>
-              <NavLink>Eng</NavLink>
-            </Link>
+            <ul>
+              <NavItemLink
+                path="/our-offer"
+                text="What we do"
+                isActive={router.asPath === '/our-offer'}
+              >
+                <Link href="/our-offer" passHref>
+                  <NavLink isActive={router.asPath === '/our-offer'}>
+                    Our offer
+                  </NavLink>
+                </Link>
+                <Link href="/case" passHref>
+                  <NavLink isActive={router.asPath === '/case'}>Case</NavLink>
+                </Link>
+                <Link href="/partners-1" passHref>
+                  <NavLink isActive={router.asPath === '/partners-1'}>
+                    Partners
+                  </NavLink>
+                </Link>
+              </NavItemLink>
+              <NavItemLink
+                path="/about-us"
+                text="Info"
+                isActive={router.asPath === '/about-us'}
+              >
+                <Link href="/about-us" passHref>
+                  <NavLink isActive={router.asPath === '/about-us'}>
+                    About us
+                  </NavLink>
+                </Link>
+                <Link href="/contact" passHref>
+                  <NavLink isActive={router.asPath === '/contact'}>
+                    Contact
+                  </NavLink>
+                </Link>
+              </NavItemLink>
+              <NavItemLink
+                path="https://www.atelesconsulting.com/eng"
+                text="Eng"
+                isActive={router.asPath.includes('/eng')}
+              >
+                <Link href="https://www.ateles.se" passHref>
+                  <NavLink>Swe</NavLink>
+                </Link>
+                <Link href="https://www.ateles.no" passHref>
+                  <NavLink>Nor</NavLink>
+                </Link>
+              </NavItemLink>
+            </ul>
           </Nav>
           <SocialMediaNav />
           <ButtonClose onClick={() => setIsOpen((prev) => !prev)}>
