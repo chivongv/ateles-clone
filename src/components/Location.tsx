@@ -33,6 +33,10 @@ type Props = {
   adress: string;
   telephone: string;
   email: string;
+  options?: {
+    linkColor?: string;
+    linkHoverColor?: string;
+  };
 };
 
 function Location(props: Props) {

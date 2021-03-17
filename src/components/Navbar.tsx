@@ -202,6 +202,14 @@ const Navbar = () => {
                   ))}
                 </NavItemLink>
               ))}
+              <NavItemLink path="/" text="Eng" isActive={router.asPath === '/'}>
+                <Link href="/" locale="sv" passHref>
+                  <a>Swe</a>
+                </Link>
+                <Link href="/" locale="no" passHref>
+                  <a>Nor</a>
+                </Link>
+              </NavItemLink>
             </ul>
           </Nav>
           <SocialMediaNav />

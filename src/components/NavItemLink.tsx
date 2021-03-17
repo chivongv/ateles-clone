@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 
 const Container = styled('li')({
   position: 'relative',
@@ -8,10 +9,10 @@ const Container = styled('li')({
 
 const DropdownMenu = styled('div')({
   position: 'absolute',
-  top: 0,
+  top: '100%',
   left: 0,
   background: 'var(--colors-white)',
-  padding: '15px 10px 5px',
+  padding: '10px 10px 5px',
   display: 'flex',
   flexFlow: 'column nowrap',
   '> *': {
@@ -43,14 +44,13 @@ const NavItemLink = ({
   type = 'internal',
   path,
   text,
+  locale = 'en-US',
   isActive = false,
   children,
 }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   if (type === 'external') {
-    console.log('type', type);
-
     return (
       <Container
         onMouseEnter={() => setIsOpen(true)}
@@ -69,7 +69,7 @@ const NavItemLink = ({
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <Link href={path} passHref>
+      <Link href={path} locale={locale} passHref>
         <NavLink isActive={isActive}>{text}</NavLink>
       </Link>
       {isOpen && <DropdownMenu>{children}</DropdownMenu>}

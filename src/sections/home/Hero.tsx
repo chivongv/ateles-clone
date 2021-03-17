@@ -26,8 +26,8 @@ const IframeWrapper = styled('div')({
         top: '-5%',
         width: '100%',
         height: '100%',
-        ['.html5-endscreen, .ytp-player-content, .videowall-endscreen, .ytp-show-tiles']: {
-            display: 'none !important',
+        '@media screen and (max-width: 640px)': {
+            display: 'none',
         },
     },
     '::after': {

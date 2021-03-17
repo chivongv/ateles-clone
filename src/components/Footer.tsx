@@ -117,12 +117,10 @@ const Footer = () => {
         </LocationWrapper>
         <List>
           <li>
-            <ListLink href="https://www.atelesconsulting.com/contact">
-              Contact |{' '}
-            </ListLink>
+            <ListLink href="/contact">Contact | </ListLink>
           </li>
           <li>
-            <ListLink href="https://www.atelesconsulting.com/personal-data-and-cookie-policy">
+            <ListLink href="/personal-data-and-cookie-policy">
               Personal data and cookie policy
             </ListLink>
           </li>

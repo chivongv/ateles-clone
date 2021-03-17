@@ -1,7 +1,7 @@
 import React from 'react';
 
 function UXGraphicDesign() {
-  return <div></div>;
+  return <div>UX & Graphic Design</div>;
 }
 
 export default UXGraphicDesign;

@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import SocialMediaNav from '@components/SocialMediaNav';
 import Navbar from '@components/Navbar';
 import Footer from '@components/Footer';
+import { aboutUsData } from '@data/about-us';
 
 const Inner = styled('div')({
   maxWidth: 1000,
@@ -88,77 +89,71 @@ const AboutUs = () => {
       <Navbar />
       <Inner>
         <Hero>
-          <HeroTitle>We are Ateles</HeroTitle>
-          <HeroSubTitle>
-            Creating the future of eCommerce and digital transformation.
-          </HeroSubTitle>
-          <HeroText>
-            Ateles is one of the leading independent digital consulting
-            companies - based on market-leading standard platforms, we deliver
-            innovative and user-friendly solutions to our customers. Since 2001,
-            we have developed solutions to customers in both the B2C and B2B
-            segments.
-          </HeroText>
-          <HeroText>
-            The way we work with eCommerce is simple - it starts and ends with a
-            best-in-class experience strategy that builds brands and drives
-            transactions.
-          </HeroText>
-          <HeroText>
-            Today, we are 50 digital experts based in Stockholm, Linköping and
-            Oslo. We are big thinkers with a passion for the latest technology
-            in eCommerce.
-          </HeroText>
+          <HeroTitle>{aboutUsData.title}</HeroTitle>
+          <HeroSubTitle>{aboutUsData.subTitle}</HeroSubTitle>
+          {aboutUsData.content.map((text) => (
+            <HeroText>{text}</HeroText>
+          ))}
         </Hero>
         <HR />
         <section>
           <SectionInner>
-            <FormTitle>Contact us</FormTitle>
+            <FormTitle>{aboutUsData.form.title}</FormTitle>
             <Form>
               <FormControl>
-                <label htmlFor="firstName">First Name</label>
+                <label htmlFor="firstName">{aboutUsData.form.firstName}</label>
                 <Input
                   type="text"
                   name="firstName"
-                  placeholder="First Name"
+                  placeholder={aboutUsData.form.firstName}
                   required
                 />
               </FormControl>
               <FormControl>
-                <label htmlFor="firstName">Last Name</label>
+                <label htmlFor="lastName">{aboutUsData.form.lastName}</label>
                 <Input
                   type="text"
                   name="lastName"
-                  placeholder="Last Name"
+                  placeholder={aboutUsData.form.lastName}
                   required
                 />
               </FormControl>
               <FormControl>
-                <label htmlFor="firstName">Email</label>
-                <Input type="email" name="email" placeholder="Email" />
+                <label htmlFor="email">{aboutUsData.form.email}</label>
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder={aboutUsData.form.email}
+                  required
+                />
               </FormControl>
               <FormControl>
-                <label htmlFor="email">Email</label>
-                <Input type="email" name="email" placeholder="Email" required />
+                <label htmlFor="phoneNumber">
+                  {aboutUsData.form.phoneNumber}
+                </label>
+                <Input
+                  type="tel"
+                  name="phoneNumber"
+                  placeholder={aboutUsData.form.phoneNumber}
+                />
               </FormControl>
               <FormControl>
-                <label htmlFor="phone">Phone</label>
-                <Input type="tel" name="phone" placeholder="Phone" />
-              </FormControl>
-              <FormControl>
-                <label htmlFor="message">Message</label>
-                <Input type="text" name="message" placeholder="Message" />
+                <label htmlFor="message">{aboutUsData.form.message}</label>
+                <Input
+                  type="text"
+                  name="message"
+                  placeholder={aboutUsData.form.message}
+                />
               </FormControl>
               <Consent>
                 <input type="checkbox" />
-                By submitting the form I agree that Ateles can save and process
-                my information in accordance with the{' '}
-                <a href="https://www.ateles.se/privacy-policy/">
-                  Privacy Policy
+                {aboutUsData.form.consentText}
+                <a href={aboutUsData.form.consentLinkUrl}>
+                  {aboutUsData.form.consentLinkText}
                 </a>
                 .
               </Consent>
-              <Button>Contact me</Button>
+              <Button>{aboutUsData.form.buttonText}</Button>
             </Form>
             <SocialMediaNav />
           </SectionInner>

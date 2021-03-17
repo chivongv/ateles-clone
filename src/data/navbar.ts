@@ -28,18 +28,4 @@ export const navData = [
       },
     ],
   },
-  {
-    title: 'Eng',
-    url: '/eng',
-    dropdown: [
-      {
-        title: 'Swe',
-        url: 'https://www.ateles.se',
-      },
-      {
-        title: 'Nor',
-        url: 'https://www.ateles.no',
-      },
-    ],
-  },
 ];
