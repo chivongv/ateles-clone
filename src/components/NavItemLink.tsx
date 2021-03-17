@@ -8,9 +8,10 @@ const Container = styled('li')({
 
 const DropdownMenu = styled('div')({
   position: 'absolute',
+  top: 0,
+  left: 0,
   background: 'var(--colors-white)',
-  marginTop: 10,
-  padding: 10,
+  padding: '15px 10px 5px',
   display: 'flex',
   flexFlow: 'column nowrap',
   '> *': {
@@ -48,6 +49,8 @@ const NavItemLink = ({
   const [isOpen, setIsOpen] = React.useState(false);
 
   if (type === 'external') {
+    console.log('type', type);
+
     return (
       <Container
         onMouseEnter={() => setIsOpen(true)}

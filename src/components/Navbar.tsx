@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import SocialMediaNav from './SocialMediaNav';
 import NavItemLink from './NavItemLink';
+import { navData } from '@data/navbar';
 
 const Container = styled('header')({
   zIndex: 1001,
@@ -40,6 +41,9 @@ const NavWrapper = styled('div')<{ isOpen: boolean }>(({ isOpen }) => ({
     transform: isOpen ? 'translateX(100%)' : 'translateX(0%)',
     transition: 'transform 500ms ease-in-out, opacity 200ms ease-in-out',
     zIndex: 1,
+  },
+  '@media all and (min-width: 640px)': {
+    alignItems: 'center',
   },
 }));
 
@@ -182,53 +186,22 @@ const Navbar = () => {
         <NavWrapper isOpen={isOpen}>
           <Nav>
             <ul>
-              <NavItemLink
-                path="/our-offer"
-                text="What we do"
-                isActive={router.asPath === '/our-offer'}
-              >
-                <Link href="/our-offer" passHref>
-                  <NavLink isActive={router.asPath === '/our-offer'}>
-                    Our offer
-                  </NavLink>
-                </Link>
-                <Link href="/case" passHref>
-                  <NavLink isActive={router.asPath === '/case'}>Case</NavLink>
-                </Link>
-                <Link href="/partners-1" passHref>
-                  <NavLink isActive={router.asPath === '/partners-1'}>
-                    Partners
-                  </NavLink>
-                </Link>
-              </NavItemLink>
-              <NavItemLink
-                path="/about-us"
-                text="Info"
-                isActive={router.asPath === '/about-us'}
-              >
-                <Link href="/about-us" passHref>
-                  <NavLink isActive={router.asPath === '/about-us'}>
-                    About us
-                  </NavLink>
-                </Link>
-                <Link href="/contact" passHref>
-                  <NavLink isActive={router.asPath === '/contact'}>
-                    Contact
-                  </NavLink>
-                </Link>
-              </NavItemLink>
-              <NavItemLink
-                path="https://www.atelesconsulting.com/eng"
-                text="Eng"
-                isActive={router.asPath.includes('/eng')}
-              >
-                <Link href="https://www.ateles.se" passHref>
-                  <NavLink>Swe</NavLink>
-                </Link>
-                <Link href="https://www.ateles.no" passHref>
-                  <NavLink>Nor</NavLink>
-                </Link>
-              </NavItemLink>
+              {navData.map((el) => (
+                <NavItemLink
+                  key={el.title}
+                  path={el.url}
+                  text={el.title}
+                  isActive={router.asPath === el.url}
+                >
+                  {el.dropdown.map((it) => (
+                    <Link key={it.title} href={it.url} passHref>
+                      <NavLink isActive={router.asPath === it.url}>
+                        {it.title}
+                      </NavLink>
+                    </Link>
+                  ))}
+                </NavItemLink>
+              ))}
             </ul>
           </Nav>
           <SocialMediaNav />

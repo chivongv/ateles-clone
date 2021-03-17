@@ -1,0 +1,100 @@
+export const heroData = {
+  title: '[ Creating the future of eCommerce and digital transformation ]',
+  buttonText: 'What we do',
+  buttonUrl: '/our-offer',
+  readMoreUrl: '#section-services',
+};
+
+export const servicesData = {
+  title: 'This is what we do best',
+  services: [
+    {
+      title: 'eCom tech',
+      text:
+        'Based on market-leading standard platforms, we build a future-proof digital commerce solution adapted to your needs. We carry out smart integrations and give you all prerequisites to conducting a successfull digital business.',
+      checkList: [
+        {
+          title: 'Unified Commerce / Omnichannel',
+          url: '/omnichannel-unified-commerce',
+        },
+        {
+          title: 'PIM',
+          url: '/pim',
+        },
+        {
+          title: 'CMS',
+          url: '/cms',
+        },
+      ],
+    },
+    {
+      title: 'Growth',
+      text:
+        'Traffic is the blood of all digital activities. Conversion is how your business becomes profitable. We help you to be visible, found and chosen by your target audience, and we do everything necessary to transform your visitors into customers.',
+      checkList: [
+        {
+          title: 'SEO',
+          url: '/seo',
+        },
+        {
+          title: 'SEM',
+          url: '/sem',
+        },
+        {
+          title: 'CRO',
+          url: '/cro',
+        },
+        {
+          title: 'Data Science /AI',
+          url: '/data-science',
+        },
+        {
+          title: 'Influencer marketing',
+          url: '/influencer-marketing',
+        },
+      ],
+    },
+    {
+      title: 'Creative',
+      text:
+        'From strategy to implementation we work to make your brand’s identity clear and strong. We develop strategies and ideas for your brand. We create content that can build modern digital brands with clear messages delivered in new and unexpected ways.',
+      checkList: [
+        {
+          title: 'UX & graphic design',
+          url: '/ux-graphic-design',
+        },
+        {
+          title: 'Branding',
+          url: '/branding',
+        },
+        {
+          title: 'Content creation',
+          url: '/content-creation',
+        },
+      ],
+    },
+  ],
+};
+
+export const customersData = {
+  title: 'A selection of our customers',
+  logoData: [
+    '/assets/gant.png',
+    '/assets/gina_tricot.png',
+    '/assets/eton.png',
+    '/assets/moller_mobility_group.png',
+    '/assets/toyota.png',
+    '/assets/audi.png',
+    '/assets/seat.png',
+    '/assets/dogman.png',
+    '/assets/melbye.png',
+    '/assets/pdf_brasserie_group.png',
+    '/assets/kinto_share.png',
+    '/assets/boots.png',
+    '/assets/dackskiftarna.jpg',
+    '/assets/fkra.jpg',
+    '/assets/maxbo.png',
+    '/assets/boots.png',
+    '/assets/boots.png',
+  ],
+};

@@ -9,10 +9,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>
-            Ateles Consulting - Future-proof digital commerce that grows your
-            business
-          </title>
           <link rel="icon" href="/favicon.ico.png" />
         </Head>
         <body>

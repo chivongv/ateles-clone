@@ -1,5 +1,14 @@
+import Head from 'next/head';
+
 const Contact = () => {
-  return <div>Contact</div>;
+  return (
+    <div>
+      <Head>
+        <title>Contact | Ateles</title>
+      </Head>
+      Contact
+    </div>
+  );
 };
 
 export default Contact;

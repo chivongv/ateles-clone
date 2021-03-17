@@ -1,8 +1,10 @@
+import { locationData } from '@data/footer';
 import styled from '@emotion/styled';
 import { FaLinkedinIn, FaFacebookF, FaInstagram } from 'react-icons/fa';
+import Location from './Location';
 
 const Container = styled('footer')({
-  background: '#000033',
+  background: 'var(--colors-footer-bg)',
   color: '#fff',
   paddingTop: 30,
   paddingBottom: 50,
@@ -43,25 +45,6 @@ const HoverLink = styled('a')({
   },
 });
 
-const Location = styled('div')({
-  padding: '20px 10px',
-  marginBottom: '1em',
-  lineHeight: 1.6,
-});
-
-const LocationCity = styled('p')({
-  marginBottom: '1em',
-  fontWeight: 600,
-});
-
-const LocationAdress = styled('div')({
-  marginBottom: '1em',
-});
-
-const LocationContact = styled('p')({
-  marginBottom: '1em',
-});
-
 const List = styled('ul')({
   listStyle: 'none',
   display: 'flex',
@@ -80,7 +63,7 @@ const ListLink = styled('a')({
   textTransform: 'uppercase',
   transition: 'color 200ms ease',
   ':hover': {
-    color: 'rgba(255,255,255,0.5)',
+    color: 'var(--colors-light-gray)',
   },
 });
 
@@ -104,7 +87,7 @@ const SocialMediaFooter = styled('ul')({
     },
   },
   ':hover': {
-    color: 'rgba(255,255,255,0.4)',
+    color: 'var(--colors-normal-gray)',
   },
 });
 
@@ -120,60 +103,17 @@ const Footer = () => {
           <HoverLink href="mailto:hello@ateles.se">hello@ateles.se</HoverLink>
         </p>
         <LocationWrapper>
-          <Location>
-            <LocationCity>STOCKHOLM</LocationCity>
-            <LocationAdress>
-              Ateles Consulting
-              <br />
-              Kungsbroplan 3A
-              <br />
-              112 27 Stockholm
-            </LocationAdress>
-            <LocationContact>
-              Tel:{' '}
-              <HoverLink href="tel:+46 8 750 70 20">+46 8 750 70 20</HoverLink>
-              <br />
-              Email:{' '}
-              <HoverLink href="mailto:hello@ateles.se">
-                hello@ateles.se
-              </HoverLink>
-            </LocationContact>
-          </Location>
-          <Location>
-            <LocationCity>LINKÖPING</LocationCity>
-            <LocationAdress>
-              Ateles Consulting
-              <br />
-              Teknikringen 6<br />
-              583 30 Linköping
-            </LocationAdress>
-            <LocationContact>
-              Tel:{' '}
-              <HoverLink href="tel:+46 13 21 10 20">+46 13 21 10 20</HoverLink>
-              <br />
-              Email:{' '}
-              <HoverLink href="mailto:hello@ateles.se">
-                hello@ateles.se
-              </HoverLink>
-            </LocationContact>
-          </Location>
-          <Location>
-            <LocationCity>OSLO</LocationCity>
-            <LocationAdress>
-              Ateles Consulting
-              <br />
-              Thunes vei 2<br />
-              0274 Oslo
-            </LocationAdress>
-            <LocationContact>
-              Tel: <HoverLink href="tel:+47 21544643">+47 21544643</HoverLink>
-              <br />
-              Email:{' '}
-              <HoverLink href="mailto:hello@ateles.no">
-                hello@ateles.no
-              </HoverLink>
-            </LocationContact>
-          </Location>
+          {locationData.map((el, index) => {
+            return (
+              <Location
+                key={index}
+                city={el.city}
+                adress={el.adress}
+                telephone={el.telephone}
+                email={el.email}
+              />
+            );
+          })}
         </LocationWrapper>
         <List>
           <li>

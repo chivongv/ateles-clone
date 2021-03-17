@@ -1,7 +1,8 @@
+import Head from 'next/head';
 import styled from '@emotion/styled';
 import SocialMediaNav from '@components/SocialMediaNav';
 import Navbar from '@components/Navbar';
-import Footer from '@/components/Footer';
+import Footer from '@components/Footer';
 
 const Inner = styled('div')({
   maxWidth: 1000,
@@ -81,6 +82,9 @@ const Button = styled('button')({
 const AboutUs = () => {
   return (
     <div>
+      <Head>
+        <title>About us | Ateles</title>
+      </Head>
       <Navbar />
       <Inner>
         <Hero>

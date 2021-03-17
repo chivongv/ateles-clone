@@ -1,14 +1,10 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import styled from '@emotion/styled';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import CaretArrowDown from '@/icons/CaretArrowDown';
-import {
-  bannerData,
-  ecomTechData,
-  growthData,
-  creativeData,
-} from '../data/our-offer';
+import Navbar from '@components/Navbar';
+import Footer from '@components/Footer';
+import CaretArrowDown from '@icons/CaretArrowDown';
+import { bannerData, servicesData } from '@data/our-offer';
 
 const Banner = styled('div')({
   minHeight: '100vh',
@@ -40,7 +36,7 @@ const BannerInner = styled('div')({
   maxWidth: 1200,
   margin: '0 auto',
   textAlign: 'center',
-  color: '#fff',
+  color: 'var(--colors-white)',
   lineHeight: 1.6,
   zIndex: 2,
 });
@@ -126,7 +122,7 @@ const ServiceList = styled('div')({
   flexWrap: 'wrap',
   justifyContent: 'center',
   alignContent: 'center',
-  gap: 15,
+  gap: '25px 15px',
   height: '100%',
   '@media screen and (min-width: 992px)': {
     marginBottom: '5rem',
@@ -195,6 +191,9 @@ const ReadMore = styled('a')({
 const OurOffer = () => {
   return (
     <div>
+      <Head>
+        <title>Our offer | Ateles</title>
+      </Head>
       <Navbar />
       <Banner>
         <BannerInner>
@@ -223,60 +222,28 @@ const OurOffer = () => {
       </Banner>
       <section>
         <SectionInner>
-          <ServiceHeader id="ecom-tech">eCom Tech</ServiceHeader>
-          <ServiceList>
-            {ecomTechData.map((el) => {
-              return (
-                <Service key={el.title}>
-                  <ImageContainerLink href={el.url}>
-                    <ImageContainer imgUrl={el.imgUrl}>
-                      <ImageContainerTitle>{el.title}</ImageContainerTitle>
-                    </ImageContainer>
-                  </ImageContainerLink>
-                  <p>{el.content}</p>
-                  <ReadMore href={el.url}>
-                    Read more about {el.readMoreText}
-                  </ReadMore>
-                </Service>
-              );
-            })}
-          </ServiceList>
-          <ServiceHeader id="growth">Growth</ServiceHeader>
-          <ServiceList>
-            {growthData.map((el) => {
-              return (
-                <Service key={el.title}>
-                  <ImageContainerLink href={el.url}>
-                    <ImageContainer imgUrl={el.imgUrl}>
-                      <ImageContainerTitle>{el.title}</ImageContainerTitle>
-                    </ImageContainer>
-                  </ImageContainerLink>
-                  <p>{el.content}</p>
-                  <ReadMore href={el.url}>
-                    Read more about {el.readMoreText}
-                  </ReadMore>
-                </Service>
-              );
-            })}
-          </ServiceList>
-          <ServiceHeader id="creative">Creative</ServiceHeader>
-          <ServiceList>
-            {creativeData.map((el) => {
-              return (
-                <Service key={el.title}>
-                  <ImageContainerLink href={el.url}>
-                    <ImageContainer imgUrl={el.imgUrl}>
-                      <ImageContainerTitle>{el.title}</ImageContainerTitle>
-                    </ImageContainer>
-                  </ImageContainerLink>
-                  <p>{el.content}</p>
-                  <ReadMore href={el.url}>
-                    Read more about {el.readMoreText}
-                  </ReadMore>
-                </Service>
-              );
-            })}
-          </ServiceList>
+          {servicesData.map((el) => {
+            return (
+              <div key={el.id}>
+                <ServiceHeader id={el.id}>{el.title}</ServiceHeader>
+                <ServiceList>
+                  {el.services.map((it) => (
+                    <Service key={it.title}>
+                      <ImageContainerLink href={it.url}>
+                        <ImageContainer imgUrl={it.imgUrl}>
+                          <ImageContainerTitle>{it.title}</ImageContainerTitle>
+                        </ImageContainer>
+                      </ImageContainerLink>
+                      <p>{it.content}</p>
+                      <ReadMore href={it.url}>
+                        Read more about {it.readMoreText}
+                      </ReadMore>
+                    </Service>
+                  ))}
+                </ServiceList>
+              </div>
+            );
+          })}
         </SectionInner>
       </section>
       <Footer />
