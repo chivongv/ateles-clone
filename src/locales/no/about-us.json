@@ -1,0 +1,20 @@
+{
+  "title": "We are Ateles",
+  "subTitle": "Creating the future of eCommerce and digital transformation.",
+  "content": [
+    "Ateles skaper og utvikler fremtidens e-handel. Våre løsninger er basert på markedsledende standardplattformer og vi leverer innovative og brukervennlige løsninger som bidrar til våre kunders vekst og lønnsomhet. Siden 2001 har Ateles utviklet netthandelsløsninger for bedrifter i både B2C og B2B segmentene. ",
+    "I dag er vi 80 digitale eksperter på kontorer i Oslo, Stockholm, Göteborg og Linköping, og jobber med kunder over hele Norden. Kundelisten inkluderer kunder som; Eton, Maxbo, Daniel Wellington, Gant, Gina Tricot, Møller Mobility Group, og IDÉ House of Brands."
+  ],
+  "form": {
+    "title": "Kontakt oss",
+    "firstName": "Fornavn",
+    "lastName": "Etternavn",
+    "email": "Email",
+    "phoneNumber": "Telefon",
+    "message": "Melding",
+    "consentText": "Jeg godtar at Ateles lagrer og behandler mine personopplysninger i henhold til",
+    "consentLinkUrl": "/privacy-policy",
+    "consentLinkText": "personopplysningsloven",
+    "buttonText": "Kontakt meg"
+  }
+}

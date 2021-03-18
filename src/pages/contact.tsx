@@ -126,6 +126,7 @@ const Contact = () => {
           <h2>{contactData.office.title}</h2>
           {contactData.office.content.map((el) => (
             <Location
+              key={el.adress}
               city={el.city}
               adress={el.adress}
               email={el.email}

@@ -1,0 +1,123 @@
+{
+  "bannerData": {
+    "title": " Våre tjenester",
+    "content": [
+      "Ateles utvikler fremtidens e-handel. Som din digitale forretningspartner tar vi en helhetlig tilnærming til din digitale virksomhet og gjør den fremtidssikker.  Vi vet at e-handel er en sentral del av din virksomhet, så vi setter kvaliteten på våre digitale løsninger svært høyt.",
+      "Vi hjelper deg med å utvikle og vokse med din digitale virksomhet. Vi gjør deg synlig der kundene dine er, og vi driver trafikk til din virksomhet. Vi forenkler, tydeliggjør, og forbedrer opplevelsen, noe som resulterer i økt konvertering. Vi leverer innovative, brukervennlige og bærekraftige løsninger med fokus på tech og kreativitet."
+    ],
+    "services": [
+      {
+        "title": "eCom Tech",
+        "url": "#ecom-tech",
+        "text": "Vi bygger en fremtidssikker løsning for digital handel som er tilpasset dine behov. Vi baserer våre løsninger på markedsledende standardplattformer og gjør solide tilpasninger og systemintegrasjoner."
+      },
+      {
+        "title": "Growth",
+        "url": "#growth",
+        "text": "Trafikk er blodomløpet for alle digitale aktiviteter. Vi hjelper deg med å bli synlig for din utvalgte målgruppe i alle digitale kanaler. Vi gjør alt som er nødvendig for å gjøre dine besøkende brukere til kunder."
+      },
+      {
+        "title": "Creative",
+        "url": "#creative",
+        "text": "I prosessen fra strategi til lansering jobber vi kontinuerlig for å utvikle identiteten til ditt varemerke. Vi lager innhold som bygger moderne digitale merkevarer på en ny og innovativ måte."
+      }
+    ]
+  },
+  "servicesData": [
+    {
+      "id": "ecom-tech",
+      "title": "eCom Tech",
+      "services": [
+        {
+          "title": "Omnichannel & Unified Commerce",
+          "url": "/omnichannel-unified-commerce",
+          "imgUrl": "/assets/Ateles-OmnikanalUnifiedCommerce.jpg",
+          "content": "Fremtidens digitale handel vil foregå der kundene er. Det er derfor vi fokuserer på omnikanal og unified commerce-løsninger for å sikre en sømløs kundeopplevelse via alle kanaler.",
+          "readMoreText": "Les mer om omnikanal og unified commerce her."
+        },
+        {
+          "title": "PIM",
+          "url": "/pim",
+          "imgUrl": "/assets/Ateles-PIM.jpg",
+          "content": "Håndter din produktinformasjon mer effektivt gjennom en investering i et kraftig PIM-system som også får dine produkter raskere ut i dine digitale kanaler.",
+          "readMoreText": "Les mer om PIM her."
+        },
+        {
+          "title": "CMS",
+          "url": "/cms",
+          "imgUrl": "/assets/Ateles-CMS.jpg",
+          "content": "I takt med at kundenes handlevaner blir mer og mer komplekse øker også kravene for å levere rike kundeopplevelser. Med riktig CMS blir det enkelt å skape en interessant og levende digital handelsplass.",
+          "readMoreText": "Les mer om CMS her."
+        }
+      ]
+    },
+    {
+      "id": "growth",
+      "title": "Growth",
+      "services": [
+        {
+          "title": "SEO",
+          "url": "/seo",
+          "imgUrl": "/assets/Ateles-SEO.jpg",
+          "content": "Søkemotorer serverer millioner av brukere per dag med svar på deres spørsmål og løsninger for deres problemer. Her gjelder det å være synlig hvis du har et nettsted, en blogg eller en nettbutikk som ønsker å øke sin trafikk.",
+          "readMoreText": "Les mer om SEO her."
+        },
+        {
+          "title": "SEM",
+          "url": "/sem",
+          "imgUrl": "/assets/Ateles-SEM.jpg",
+          "content": "Å utnytte alle digitale kanaler til det fulle er en nødvendighet dersom du vil være konkurransedyktig. SEM eller søkemotormarkedsføring bør være en essensiell del av din digitale strategi for økning av trafikk og salg.",
+          "readMoreText": "Les mer om SEM her."
+        },
+        {
+          "title": "CRO",
+          "url": "/cro",
+          "imgUrl": "/assets/Ateles-CRO.jpg",
+          "content": "Ved hjelp av konverteringsoptimalisering gjennom bl. a. A/B-testing, kan vi tette igjen hullene på nettstedet ditt som lekker penger hver dag. Dette gjør vi gjennom å bruke informasjon fra de riktige kundene, for slik å forbedre nettstedet ditt og øke salget.",
+          "readMoreText": "Les mer om CRO her."
+        },
+        {
+          "title": "Data Science / AI",
+          "url": "/data-science",
+          "imgUrl": "/assets/Ateles-DataScience.jpg",
+          "content": "Hos Ateles får du tilgang til den fremste kompetansen innen Data Science for e-handel, og verktøyene du trenger for å konvertere dataene dine om til økt lønnsomhet.",
+          "readMoreText": "Les mer om data science / AI her."
+        },
+        {
+          "title": "Influencer Marketing",
+          "url": "/influencer-marketing",
+          "imgUrl": "/assets/Ateles-InfluencerMarketing.jpg",
+          "content": "Hos Ateles får du kunnskapen du behøver for å nå målgruppen din gjennom influencer marketing. Vi hjelper deg å finne strategier og prosesser som gjør det mulig å maksimere den nåværende markedsføringen din ved hjelp av influencere, i samtlige kanaler.",
+          "readMoreText": "Les mer om influencer marketing her."
+        }
+      ]
+    },
+    {
+      "id": "creative",
+      "title": "Creative",
+      "services": [
+        {
+          "title": "UX & graphic design",
+          "url": "/ux-graphic-design",
+          "imgUrl": "/assets/Ateles-UXandgraphicdesign.jpg",
+          "content": "Vi tilbyr bransjeledende UX og grafisk design som hjelper din bedrift med å skille seg ut visuelt. Vi hjelper deg med å forstå kundene og målene deres, og tilpasser designet for å møte kundens behov.",
+          "readMoreText": "Les mer om UX & grafisk design her."
+        },
+        {
+          "title": "Branding",
+          "url": "/branding",
+          "imgUrl": "/assets/Ateles-Branding.jpg",
+          "content": "Vil du at merkevaren skal fornyes, eller har du kanskje et helt nytt merke som skal etableres i markedet? Ateles utvikler strategier for hvordan merkevaren din vil bli en suksess i markedet og hvordan den kan bygges og vokse over tid.",
+          "readMoreText": "Les mer om branding her."
+        },
+        {
+          "title": "Content creation",
+          "url": "/content-creation",
+          "imgUrl": "/assets/Ateles-ContentCreation.jpg",
+          "content": "Trenger du hjelp til å skape engasjerende innhold for merkevaren din? Ateles tilbyr innholdsproduksjon som skiller din bedrift fra andre med innhold som inspirerer og engasjerer. Vi optimaliserer og pakketerer innholdet slik at det passer for alle dine kanaler.",
+          "readMoreText": "Les mer om content creation her."
+        }
+      ]
+    }
+  ]
+}

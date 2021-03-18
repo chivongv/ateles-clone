@@ -1,0 +1,122 @@
+{
+  "bannerData": {
+    "title": "Våra tjänster",
+    "content": [
+      "Ateles skapar och utvecklar framtidens e-handel. Som din strategiska affärspartner tar vi ett helhetsgrepp om din digitala affär och framtidssäkrar din verksamhet. Tillsammans utvecklar och växer vi din digitala affär, ser till att du syns där dina kunder är samt driver relevant trafik till din webbplats. Vi förenklar, förtydligar och förbättrar upplevelsen vilket resulterar i ökad konvertering. För att förverkliga detta levererar vi innovativa, användarvänliga och hållbara lösningar med fokus på tech och kreativitet."
+    ],
+    "services": [
+      {
+        "title": "eCom Tech",
+        "url": "#ecom-tech",
+        "text": "Baserat på ledande plattformar bygger vi en framtidssäker e-handelslösning anpassad efter dina behov. Vi genomför smarta integrationer och ger dig alla förutsättningar för att bedriva en framgångsrik digital handel."
+      },
+      {
+        "title": "Growth",
+        "url": "#growth",
+        "text": "Trafik är livsblodet för all digital verksamhet. Konvertering är hur din verksamhet blir lönsam. Vi hjälper dig synas, hittas och väljas av din målgrupp, och gör allt som krävs för att omvandla dina besökare till kunder. "
+      },
+      {
+        "title": "Creative",
+        "url": "#creative",
+        "text": "Från strategi till aktivering arbetar vi för att tydliggöra identiteten på ditt varumärke. Vi tar fram strategier och idéer för ditt brand. Vi skapar content som bygger moderna digitala varumärken med tydlig avsändare på ett nytt och oväntat sätt.  "
+      }
+    ]
+  },
+  "servicesData": [
+    {
+      "id": "ecom-tech",
+      "title": "eCom Tech",
+      "services": [
+        {
+          "title": "Omnichannel & Unified Commerce",
+          "url": "/omnichannel-unified-commerce",
+          "imgUrl": "/assets/Ateles-OmnikanalUnifiedCommerce.jpg",
+          "content": "Framtidens digitala handel kommer att ske överallt där kunderna är. Därför behöver vi omnikanal- och unified commerce-lösningar för att säkerställa en enhetlig kundupplevelse i alla kanaler.",
+          "readMoreText": "Läs mer om Omnikanal & Unified Commerce"
+        },
+        {
+          "title": "PIM",
+          "url": "/pim",
+          "imgUrl": "/assets/Ateles-PIM.jpg",
+          "content": "Genom en investering i ett kraftfullt PIM-system som stödjer dina arbetsprocesser kan du hantera din information mer effektivt och konsekvent. Och detta samtidigt som du kan få ut dina produkter snabbare i alla dina kanaler.",
+          "readMoreText": "Läs mer om PIM"
+        },
+        {
+          "title": "CMS",
+          "url": "/cms",
+          "imgUrl": "/assets/Ateles-CMS.jpg",
+          "content": "Med rätt CMS blir det enkelt att skapa en intressant och levande e-handelsplats. I takt med att kundernas köpresor blir allt mer komplexa ställs också högre krav på företag att leverera rika kundupplevelser.",
+          "readMoreText": "Läs mer om CMS"
+        }
+      ]
+    },
+    {
+      "id": "growth",
+      "title": "Growth",
+      "services": [
+        {
+          "title": "SEO",
+          "url": "/seo",
+          "imgUrl": "/assets/Ateles-SEO.jpg",
+          "content": "Målet med SEO är att synas där din målgrupps intresse är som störst, genom att få den egna webbplatsen att ta höga positioner i sökmotorns organiska sökresultat för ord och fraser som är relevanta för din verksamhet.",
+          "readMoreText": "Läs mer om SEO här"
+        },
+        {
+          "title": "SEM",
+          "url": "/sem",
+          "imgUrl": "/assets/Ateles-SEM.jpg",
+          "content": "Att utnyttja de digitala kanalerna till fullo är ett måste för att vara konkurrenskraftig i ert segment. SEM är en viktig del av ditt företags digitala närvaro, och en starkt bidragande faktor i er totala varumärkesupplevelse.",
+          "readMoreText": "Läs mer om SEM här"
+        },
+        {
+          "title": "CRO",
+          "url": "/cro",
+          "imgUrl": "/assets/Ateles-CRO.jpg",
+          "content": "Med hjälp av konverteringsoptimering och A/B-test kan vi täppa igen de hål i din webbplats som läcker pengar varje dag, genom att använda data från riktiga kunder för att förbättra din webbplats och öka din försäljning.",
+          "readMoreText": "Läs mer om CRO här"
+        },
+        {
+          "title": "Data Science / AI",
+          "url": "/data-science",
+          "imgUrl": "/assets/Ateles-DataScience.jpg",
+          "content": "Data science erbjuder metoder för att göra smartare val genom analys av data. Det innebär en möjlighet att hitta trender i databruset och att genomföra handlingar som utnyttjar dem på allra bästa sätt.",
+          "readMoreText": "Läs mer om Data Science / AI här"
+        },
+        {
+          "title": "Influencer Marketing",
+          "url": "/influencer-marketing",
+          "imgUrl": "/assets/Ateles-InfluencerMarketing.jpg",
+          "content": "Med influencer marketing maximerar du räckvidden för ditt varumärke. Du når din målgrupp genom en person de beundrar samt hjälper till att stärka, utveckla och anpassa ditt varumärke.",
+          "readMoreText": "Läs mer om Influencer Marketing här"
+        }
+      ]
+    },
+    {
+      "id": "creative",
+      "title": "Creative",
+      "services": [
+        {
+          "title": "UX & graphic design",
+          "url": "/ux-graphic-design",
+          "imgUrl": "/assets/Ateles-UXandgraphicdesign.jpg",
+          "content": "Vi erbjuder branschledande UX och grafisk design som hjälper din verksamhet sticka ut på en hårt konkurrensutsatt marknad. Vi hjälper dig att skapa förståelse för era kunder och affärsmål, och anpassar designen för att möta kundernas behov.",
+          "readMoreText": "Läs mer om UX & grafisk design"
+        },
+        {
+          "title": "Branding",
+          "url": "/branding",
+          "imgUrl": "/assets/Ateles-Branding.jpg",
+          "content": "Vill du att ditt varumärke ska göra en förändringsresa, eller har du kanske ett helt nytt brand som ska etableras på marknaden? Ateles tar fram och utvecklar strategier för hur ditt varumärke ska bli en succé samt hur det kan byggas och växa över tid.",
+          "readMoreText": "Läs mer om branding"
+        },
+        {
+          "title": "Content creation",
+          "url": "/content-creation",
+          "imgUrl": "/assets/Ateles-ContentCreation.jpg",
+          "content": "Behöver du hjälp med att skapa engagerande innehåll till ditt varumärke? Ateles erbjuder content creation som får din verksamhet att sticka ut. Innehåll som inspirerar och engagerar. Vi optimerar och paketerar innehållet så att det passar för alla dina kanaler.",
+          "readMoreText": "Läs mer om Content creation"
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import Link from 'next/link';
 import CaretArrowDown from '@icons/CaretArrowDown';
-import { heroData } from '@data/home';
+import useTranslation from 'next-translate/useTranslation';
 
 const Container = styled('section')({
     height: '100vh',
@@ -105,6 +105,8 @@ const ArrowWrapper = styled('div')({
 });
 
 const Hero = () => {
+    const { t } = useTranslation();
+
     return (
         <Container>
             <IframeWrapper>
@@ -117,15 +119,17 @@ const Hero = () => {
                 />
             </IframeWrapper>
             <Center>
-                <Title>{heroData.title}</Title>
-                <ButtonWrapper>
-                    <ButtonLink href={heroData.buttonUrl}>
-                        {heroData.buttonText}
-                    </ButtonLink>
-                </ButtonWrapper>
+                <Title>{t('home:hero.title')}</Title>
+                {t('home:hero.buttonText') && (
+                    <ButtonWrapper>
+                        <ButtonLink href={t('home:hero.buttonUrl')}>
+                            {t('home:hero.buttonText')}
+                        </ButtonLink>
+                    </ButtonWrapper>
+                )}
             </Center>
             <ArrowWrapper>
-                <Link href={heroData.readMoreUrl}>
+                <Link href={t('home:hero.readMoreUrl')}>
                     <a>
                         <CaretArrowDown height="40" width="40" />
                     </a>

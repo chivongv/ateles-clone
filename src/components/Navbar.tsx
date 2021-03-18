@@ -190,11 +190,17 @@ const Navbar = () => {
                 <NavItemLink
                   key={el.title}
                   path={el.url}
+                  locale={router.locale}
                   text={el.title}
                   isActive={router.asPath === el.url}
                 >
                   {el.dropdown.map((it) => (
-                    <Link key={it.title} href={it.url} passHref>
+                    <Link
+                      key={it.title}
+                      locale={router.locale}
+                      href={it.url}
+                      passHref
+                    >
                       <NavLink isActive={router.asPath === it.url}>
                         {it.title}
                       </NavLink>
@@ -202,14 +208,49 @@ const Navbar = () => {
                   ))}
                 </NavItemLink>
               ))}
-              <NavItemLink path="/" text="Eng" isActive={router.asPath === '/'}>
-                <Link href="/" locale="sv" passHref>
-                  <a>Swe</a>
-                </Link>
-                <Link href="/" locale="no" passHref>
-                  <a>Nor</a>
-                </Link>
-              </NavItemLink>
+              {router.locale === 'sv' ? (
+                <NavItemLink
+                  path={router.asPath}
+                  text="SWE"
+                  locale={router.locale}
+                  isActive={router.asPath === '/'}
+                >
+                  <Link href={router.asPath} locale="no" passHref>
+                    <a>NOR</a>
+                  </Link>
+                  <Link href={router.asPath} locale="en-US" passHref>
+                    <a>ENG</a>
+                  </Link>
+                </NavItemLink>
+              ) : router.locale === 'no' ? (
+                <NavItemLink
+                  path={router.asPath}
+                  text="NOR"
+                  locale={router.locale}
+                  isActive={router.asPath === '/'}
+                >
+                  <Link href={router.asPath} locale="sv" passHref>
+                    <a>SWE</a>
+                  </Link>
+                  <Link href={router.asPath} locale="en-US" passHref>
+                    <a>ENG</a>
+                  </Link>
+                </NavItemLink>
+              ) : (
+                <NavItemLink
+                  path={router.asPath}
+                  text="ENG"
+                  locale={router.locale}
+                  isActive={router.asPath === '/'}
+                >
+                  <Link href={router.asPath} locale="sv" passHref>
+                    <a>SWE</a>
+                  </Link>
+                  <Link href={router.asPath} locale="no" passHref>
+                    <a>NOR</a>
+                  </Link>
+                </NavItemLink>
+              )}
             </ul>
           </Nav>
           <SocialMediaNav />

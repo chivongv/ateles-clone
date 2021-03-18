@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { customersData } from '@data/home';
+import useTranslation from 'next-translate/useTranslation';
 
 const Container = styled('section')({
     padding: '50px 20px 40px',
@@ -38,11 +38,15 @@ const ListItem = styled('li')({
 });
 
 const Customers = () => {
+    const { t } = useTranslation();
+    const customers: string[] =
+        t('home:customersData.logoData', {}, { returnObjects: true }) || [];
+
     return (
         <Container>
-            <Title>{customersData.title}</Title>
+            <Title>{t('home:customersData.title')}</Title>
             <List>
-                {customersData.logoData.map((url, index) => {
+                {customers.map((url, index) => {
                     return (
                         <ListItem key={index}>
                             <img src={url} />

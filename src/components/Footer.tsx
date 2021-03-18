@@ -1,5 +1,5 @@
-import { locationData } from '@data/footer';
 import styled from '@emotion/styled';
+import useTranslation from 'next-translate/useTranslation';
 import { FaLinkedinIn, FaFacebookF, FaInstagram } from 'react-icons/fa';
 import Location from './Location';
 
@@ -91,7 +91,18 @@ const SocialMediaFooter = styled('ul')({
   },
 });
 
+type Location = {
+  city: string;
+  adress: string;
+  telephone: string;
+  email: string;
+};
+
 const Footer = () => {
+  const { t } = useTranslation();
+  const locations: Location[] =
+    t('common:footer.locations', {}, { returnObjects: true }) || [];
+
   return (
     <Container>
       <Inner>
@@ -103,7 +114,7 @@ const Footer = () => {
           <HoverLink href="mailto:hello@ateles.se">hello@ateles.se</HoverLink>
         </p>
         <LocationWrapper>
-          {locationData.map((el, index) => {
+          {locations.map((el, index) => {
             return (
               <Location
                 key={index}
@@ -117,11 +128,13 @@ const Footer = () => {
         </LocationWrapper>
         <List>
           <li>
-            <ListLink href="/contact">Contact | </ListLink>
+            <ListLink href="/contact">
+              {t('common:footer.contactText')}
+            </ListLink>
           </li>
           <li>
             <ListLink href="/personal-data-and-cookie-policy">
-              Personal data and cookie policy
+              {t('common:footer.privacyPolicyText')}
             </ListLink>
           </li>
         </List>

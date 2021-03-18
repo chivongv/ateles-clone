@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { servicesData } from '@data/home';
+import useTranslation from 'next-translate/useTranslation';
 
 const Container = styled('section')({
     padding: '50px 30px 20px',
@@ -31,6 +31,7 @@ const ServiceList = styled('div')({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     alignContent: 'center',
+    gap: 10,
     marginBottom: '2rem',
 });
 
@@ -40,7 +41,7 @@ const Service = styled('div')({
         flex: '45%',
     },
     '@media screen and (min-width: 800px)': {
-        flex: '33%',
+        flex: '30%',
     },
 });
 
@@ -74,18 +75,33 @@ const CheckList = styled('ul')({
     },
 });
 
+type Service = {
+    title: string;
+    text: string;
+    checkList: [];
+};
+
+type CheckItem = {
+    title: string;
+    url: string;
+};
+
 const Services = () => {
+    const { t } = useTranslation();
+    const services: Service[] =
+        t('home:servicesData.services', {}, { returnObjects: true }) || [];
+
     return (
         <Container id="section-services">
-            <Title>{servicesData.title}</Title>
+            <Title>{t('home:servicesData.title')}</Title>
             <ServiceList>
-                {servicesData.services.map((el, i) => {
+                {services.map((el: Service, i) => {
                     return (
                         <Service key={el.title}>
                             <ServiceTitle>{el.title} ▸</ServiceTitle>
                             <ServiceText>{el.text}</ServiceText>
                             <CheckList>
-                                {el.checkList.map((item, j) => {
+                                {el.checkList?.map((item: CheckItem, j) => {
                                     return (
                                         <li key={item.title}>
                                             <a href={item.url}>{item.title}</a>

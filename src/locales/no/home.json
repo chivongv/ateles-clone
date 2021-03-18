@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "title": "[ Creating the future of eCommerce and digital transformation ]",
+    "buttonText": "",
+    "buttonUrl": "/our-offer",
+    "readMoreUrl": "#section-services"
+  },
+  "servicesData": {
+    "title": "Dette er vi best på ",
+    "services": [
+      {
+        "title": "eCom tech",
+        "text": "Vi bygger en fremtidssikker løsning for digital handel i henhold til dine behov. Vi baserer våre løsninger på markedsledende standardplattformer og gjør solide tilpasninger og systemintegrasjoner.",
+        "checkList": [
+          {
+            "title": "Unified Commerce / Omnichannel",
+            "url": "/omnichannel-unified-commerce"
+          },
+          {
+            "title": "PIM",
+            "url": "/pim"
+          },
+          {
+            "title": "CMS",
+            "url": "/cms"
+          }
+        ]
+      },
+      {
+        "title": "Growth",
+        "text": "Trafikk er blodomløpet for alle digitale aktiviteter. Vi hjelper deg med å bli synlig for din utvalgte målgruppe i alle digitale kanaler. Vi gjør alt som er nødvendig for å gjøre dine besøkende til kjøpende kunder.",
+        "checkList": [
+          {
+            "title": "SEO",
+            "url": "/seo"
+          },
+          {
+            "title": "SEM",
+            "url": "/sem"
+          },
+          {
+            "title": "CRO",
+            "url": "/cro"
+          },
+          {
+            "title": "Data Science /AI",
+            "url": "/data-science"
+          },
+          {
+            "title": "Influencer marketing",
+            "url": "/influencer-marketing"
+          }
+        ]
+      },
+      {
+        "title": "Creative",
+        "text": "I prosessen fra strategi til lansering jobber vi kontinuerlig for å utvikle din varemerkeidentitet. Vi lager innhold som bygger moderne digitale merkevarer på en ny og innovativ måte.",
+        "checkList": [
+          {
+            "title": "UX & graphic design",
+            "url": "/ux-graphic-design"
+          },
+          {
+            "title": "Branding",
+            "url": "/branding"
+          },
+          {
+            "title": "Content creation",
+            "url": "/content-creation"
+          }
+        ]
+      }
+    ]
+  },
+  "customersData": {
+    "title": "A selection of our customers",
+    "logoData": [
+      "/assets/moller_mobility_group.png",
+      "/assets/eton.png",
+      "/assets/gant.png",
+      "/assets/gina_tricot.png",
+      "/assets/fkra.jpg",
+      "/assets/espresso_house.png",
+      "/assets/toyota.png",
+      "/assets/maxbo.png",
+      "/assets/glava_isolasjon.png",
+      "/assets/boots.png",
+      "/assets/kinto_share.png",
+      "/assets/dackskiftarna.jpg",
+      "/assets/melbye.png",
+      "/assets/dogman.png",
+      "/assets/pdf_brasserie_group.png"
+    ]
+  }
+}

@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import styled from '@emotion/styled';
+import useTranslation from 'next-translate/useTranslation';
 import SocialMediaNav from '@components/SocialMediaNav';
 import Navbar from '@components/Navbar';
 import Footer from '@components/Footer';
-import { aboutUsData } from '@data/about-us';
 
 const Inner = styled('div')({
   maxWidth: 1000,
@@ -81,6 +81,10 @@ const Button = styled('button')({
 });
 
 const AboutUs = () => {
+  const { t } = useTranslation();
+  const content: { text: string }[] =
+    t('about-us:content', {}, { returnObjects: true }) || [];
+
   return (
     <div>
       <Head>
@@ -89,71 +93,73 @@ const AboutUs = () => {
       <Navbar />
       <Inner>
         <Hero>
-          <HeroTitle>{aboutUsData.title}</HeroTitle>
-          <HeroSubTitle>{aboutUsData.subTitle}</HeroSubTitle>
-          {aboutUsData.content.map((text) => (
-            <HeroText>{text}</HeroText>
+          <HeroTitle>{t('about-us:title')}</HeroTitle>
+          <HeroSubTitle>{t('about-us:subTitle')}</HeroSubTitle>
+          {content.map((text, index) => (
+            <HeroText key={index}>{text}</HeroText>
           ))}
         </Hero>
         <HR />
         <section>
           <SectionInner>
-            <FormTitle>{aboutUsData.form.title}</FormTitle>
+            <FormTitle>{t('about-us:form.title')}</FormTitle>
             <Form>
               <FormControl>
-                <label htmlFor="firstName">{aboutUsData.form.firstName}</label>
+                <label htmlFor="firstName">
+                  {t('about-us:form.firstName')}
+                </label>
                 <Input
                   type="text"
                   name="firstName"
-                  placeholder={aboutUsData.form.firstName}
+                  placeholder={t('about-us:form.firstName')}
                   required
                 />
               </FormControl>
               <FormControl>
-                <label htmlFor="lastName">{aboutUsData.form.lastName}</label>
+                <label htmlFor="lastName">{t('about-us:form.lastName')}</label>
                 <Input
                   type="text"
                   name="lastName"
-                  placeholder={aboutUsData.form.lastName}
+                  placeholder={t('about-us:form.lastName')}
                   required
                 />
               </FormControl>
               <FormControl>
-                <label htmlFor="email">{aboutUsData.form.email}</label>
+                <label htmlFor="email">{t('about-us:form.email')}</label>
                 <Input
                   type="email"
                   name="email"
-                  placeholder={aboutUsData.form.email}
+                  placeholder={t('about-us:form.email')}
                   required
                 />
               </FormControl>
               <FormControl>
                 <label htmlFor="phoneNumber">
-                  {aboutUsData.form.phoneNumber}
+                  {t('about-us:form.phoneNumber')}
                 </label>
                 <Input
                   type="tel"
                   name="phoneNumber"
-                  placeholder={aboutUsData.form.phoneNumber}
+                  placeholder={t('about-us:form.phoneNumber')}
                 />
               </FormControl>
               <FormControl>
-                <label htmlFor="message">{aboutUsData.form.message}</label>
+                <label htmlFor="message">{t('about-us:form.message')}</label>
                 <Input
                   type="text"
                   name="message"
-                  placeholder={aboutUsData.form.message}
+                  placeholder={t('about-us:form.message')}
                 />
               </FormControl>
               <Consent>
                 <input type="checkbox" />
-                {aboutUsData.form.consentText}
-                <a href={aboutUsData.form.consentLinkUrl}>
-                  {aboutUsData.form.consentLinkText}
+                {t('about-us:form.consentText')}
+                <a href={t('about-us:form.consentLinkUrl')}>
+                  {t('about-us:form.consentLinkText')}
                 </a>
                 .
               </Consent>
-              <Button>{aboutUsData.form.buttonText}</Button>
+              <Button>{t('about-us:form.buttonText')}</Button>
             </Form>
             <SocialMediaNav />
           </SectionInner>

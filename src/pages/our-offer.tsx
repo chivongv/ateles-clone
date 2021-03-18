@@ -1,15 +1,14 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import useTranslation from 'next-translate/useTranslation';
 import styled from '@emotion/styled';
 import Navbar from '@components/Navbar';
 import Footer from '@components/Footer';
 import CaretArrowDown from '@icons/CaretArrowDown';
-import { bannerData, servicesData } from '@data/our-offer';
 
 const Banner = styled('div')({
   minHeight: '100vh',
-  background:
-    'url("/assets/andrew-ridley-jR4Zf-riEjI-unsplash.jpg") no-repeat center',
+  background: `url("/assets/andrew-ridley-jR4Zf-riEjI-unsplash.jpg") no-repeat center`,
   backgroundSize: 'cover',
   display: 'flex',
   flexDirection: 'column',
@@ -19,7 +18,7 @@ const Banner = styled('div')({
   marginBottom: 20,
   position: 'relative',
   '::after': {
-    content: '""',
+    content: `""`,
     width: '100%',
     height: '100%',
     position: 'absolute',
@@ -167,7 +166,7 @@ const ImageContainer = styled('div')<{ imgUrl: string }>(({ imgUrl }) => ({
   position: 'relative',
   height: '100%',
   '::after': {
-    content: '""',
+    content: `""`,
     width: '100%',
     height: '100%',
     background: 'hsl(0, 0%, 20%, 0.35)',
@@ -188,7 +187,35 @@ const ReadMore = styled('a')({
   },
 });
 
+type BannerService = {
+  title: string;
+  url: string;
+  text: string;
+};
+
+type Service = {
+  title: string;
+  url: string;
+  imgUrl: string;
+  content: string;
+  readMoreText: string;
+};
+
+type ServicesData = {
+  id: string;
+  title: string;
+  services: Service[];
+};
+
 const OurOffer = () => {
+  const { t } = useTranslation();
+  const content: string[] =
+    t('our-offer:bannerData.content', {}, { returnObjects: true }) || [];
+  const bannerServices: BannerService[] =
+    t('our-offer:bannerData.services', {}, { returnObjects: true }) || [];
+  const servicesData: ServicesData[] =
+    t('our-offer:servicesData', {}, { returnObjects: true }) || [];
+
   return (
     <div>
       <Head>
@@ -197,10 +224,12 @@ const OurOffer = () => {
       <Navbar />
       <Banner>
         <BannerInner>
-          <BannerTitle>{bannerData.title}</BannerTitle>
-          <BannerText>{bannerData.text}</BannerText>
+          <BannerTitle>{t('our-offer:bannerData.title')}</BannerTitle>
+          {content.map((text, index) => (
+            <BannerText key={index}>{text}</BannerText>
+          ))}
           <BannerServiceList>
-            {bannerData.services.map((el) => {
+            {bannerServices.map((el) => {
               return (
                 <BannerService key={el.title}>
                   <Link href={el.url}>
@@ -235,9 +264,7 @@ const OurOffer = () => {
                         </ImageContainer>
                       </ImageContainerLink>
                       <p>{it.content}</p>
-                      <ReadMore href={it.url}>
-                        Read more about {it.readMoreText}
-                      </ReadMore>
+                      <ReadMore href={it.url}>{it.readMoreText}</ReadMore>
                     </Service>
                   ))}
                 </ServiceList>

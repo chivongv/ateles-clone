@@ -1,3 +1,5 @@
+const nextTranslate = require('next-translate');
+
 module.exports = {
   async redirects() {
     return [
@@ -13,8 +15,5 @@ module.exports = {
       },
     ];
   },
-  i18n: {
-    locales: ['en-US', 'no', 'sv'],
-    defaultLocale: 'en-US',
-  },
+  ...nextTranslate(),
 };

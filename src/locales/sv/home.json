@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "title": "[ Creating the future of eCommerce and digital transformation ]",
+    "buttonText": "",
+    "buttonUrl": "/our-offer",
+    "readMoreUrl": "#section-services"
+  },
+  "servicesData": {
+    "title": "Det här är vi bäst på",
+    "services": [
+      {
+        "title": "eCom tech",
+        "text": "Baserat på ledande plattformar bygger vi en framtidssäker e-handelslösning anpassad efter dina behov. Vi genomför smarta integrationer och ger dig alla förutsättningar för att bedriva en framgångsrik digital handel.",
+        "checkList": [
+          {
+            "title": "Unified Commerce / Omnichannel",
+            "url": "/omnichannel-unified-commerce"
+          },
+          {
+            "title": "PIM",
+            "url": "/pim"
+          },
+          {
+            "title": "CMS",
+            "url": "/cms"
+          }
+        ]
+      },
+      {
+        "title": "Growth",
+        "text": "Trafik är livsblodet för all digital verksamhet. Konvertering är hur din verksamhet blir lönsam. Vi hjälper dig att synas, hittas och väljas av din målgrupp, och vi gör allt som krävs för att omvandla dina besökare till kunder.",
+        "checkList": [
+          {
+            "title": "SEO",
+            "url": "/seo"
+          },
+          {
+            "title": "SEM",
+            "url": "/sem"
+          },
+          {
+            "title": "CRO",
+            "url": "/cro"
+          },
+          {
+            "title": "Data Science /AI",
+            "url": "/data-science"
+          },
+          {
+            "title": "Influencer marketing",
+            "url": "/influencer-marketing"
+          }
+        ]
+      },
+      {
+        "title": "Creative",
+        "text": "Från strategi till aktivering arbetar vi för att tydliggöra identiteten på ditt varumärke. Vi tar fram strategier och idéer för ditt brand. Vi skapar content som bygger moderna digitala varumärken med tydlig avsändare på ett nytt och oväntat sätt.",
+        "checkList": [
+          {
+            "title": "UX & graphic design",
+            "url": "/ux-graphic-design"
+          },
+          {
+            "title": "Branding",
+            "url": "/branding"
+          },
+          {
+            "title": "Content creation",
+            "url": "/content-creation"
+          }
+        ]
+      }
+    ]
+  },
+  "customersData": {
+    "title": "A selection of our customers",
+    "logoData": [
+      "/assets/kinto_share.png",
+      "/assets/toyota.png",
+      "/assets/dackskiftarna.jpg",
+      "/assets/boots.png",
+      "/assets/audi.png",
+      "/assets/eton.png",
+      "/assets/gina_tricot.png",
+      "/assets/moller_mobility_group.png",
+      "/assets/seat.png",
+      "/assets/gant.png",
+      "/assets/pdf_brasserie_group.png",
+      "/assets/maxbo.png",
+      "/assets/fkra.jpg",
+      "/assets/dogman.png",
+      "/assets/melbye.png"
+    ]
+  }
+}
