@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "[ Creating the future of eCommerce and digital transformation ]",
-    "buttonText": "",
+    "buttonText": "Hva vi gjør",
     "buttonUrl": "/our-offer",
     "readMoreUrl": "#section-services"
   },
@@ -73,7 +73,7 @@
     ]
   },
   "customersData": {
-    "title": "A selection of our customers",
+    "title": "Noen av våre kunder",
     "logoData": [
       "/assets/moller_mobility_group.png",
       "/assets/eton.png",

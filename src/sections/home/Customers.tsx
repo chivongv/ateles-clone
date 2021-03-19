@@ -13,27 +13,22 @@ const Title = styled('h2')({
 });
 
 const List = styled('ul')({
-    display: 'flex',
-    flexWrap: 'wrap',
     listStyle: 'none',
-    justifyItems: 'center',
-    alignItems: 'center',
-    gap: 30,
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+    gap: 10,
+    '@media screen and (min-width: 640px)': {
+        gap: 30,
+    },
 });
 
 const ListItem = styled('li')({
-    flex: 1,
-    display: 'flex',
-    justifyContent: 'center',
-    alignContent: 'center',
     width: '100%',
-    '@media screen and (min-width: 368px)': {
-        maxWidth: 200,
-        maxHeight: 240,
-        img: {
-            minWidth: 150,
-            maxWidth: 200,
-        },
+    margin: 'auto',
+    img: {
+        width: '100%',
+        maxWidth: '100%',
+        margin: '0 auto',
     },
 });
 
